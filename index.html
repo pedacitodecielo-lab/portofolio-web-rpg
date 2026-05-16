@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Emelio Exaudi — Data Analyst Portfolio</title>
+<meta name="description" content="Final-year ITB Meteorology student. Bias correction, risk modeling, hydrological analysis. Pivoting into data analyst and data engineer roles." />
+<meta property="og:title" content="Emelio Exaudi — Data Analyst Portfolio" />
+<meta property="og:description" content="Selected work in bias correction, risk modeling, and geospatial analysis." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230a0d14'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='14' font-weight='600' fill='%235fc9f8' text-anchor='middle'%3EEX%3C/text%3E%3C/svg%3E" />
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader" id="loader">
+  <div class="loader-inner">
+    <div class="loader-text">EMELIO EXAUDI</div>
+    <div class="loader-bar"><div class="loader-fill"></div></div>
+    <div class="loader-status" id="loader-status">Initializing</div>
+  </div>
+</div>
+
+<!-- Custom cursor -->
+<div class="cursor-dot" id="cursor-dot"></div>
+<div class="cursor-ring" id="cursor-ring"></div>
+
+<!-- Scroll progress -->
+<div class="scroll-progress" id="scroll-progress"></div>
+
+<!-- Noise overlay -->
+<div class="noise-overlay"></div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-logo" data-magnetic>
+      <span class="nav-mark">
+        <svg viewBox="0 0 32 32" width="20" height="20">
+          <rect width="32" height="32" rx="6" fill="url(#logoGrad)" />
+          <text x="16" y="22" font-family="IBM Plex Mono, monospace" font-size="13" font-weight="600" fill="#0a0d14" text-anchor="middle">EX</text>
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#5fc9f8"/>
+              <stop offset="100%" stop-color="#a78bfa"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </span>
+      <span class="nav-name">Emelio Exaudi</span>
+    </a>
+    <div class="nav-links">
+      <a href="#work" data-magnetic><span class="nl-num">01</span> Work</a>
+      <a href="#skills" data-magnetic><span class="nl-num">02</span> Skills</a>
+      <a href="#about" data-magnetic><span class="nl-num">03</span> About</a>
+      <a href="#contact" data-magnetic><span class="nl-num">04</span> Contact</a>
+    </div>
+    <a href="Emelio_Exaudi_Resume.pdf" target="_blank" class="nav-cta" data-magnetic>
+      <span class="nc-label">Resume</span>
+      <span class="nc-arrow">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 12L12 2M12 2H4M12 2V10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </span>
+    </a>
+  </div>
+</nav>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <canvas class="hero-canvas" id="hero-canvas"></canvas>
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+    </div>
+
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-eyebrow" data-reveal>
+          <span class="he-dot"></span>
+          <span class="he-text">AVAILABLE FOR HIRE / MID-2026</span>
+        </div>
+
+        <h1 class="hero-title">
+          <span class="ht-line" data-reveal-line><span>Turning noisy</span></span>
+          <span class="ht-line" data-reveal-line><span>environmental data</span></span>
+          <span class="ht-line ht-accent" data-reveal-line><span>into business decisions.</span></span>
+        </h1>
+
+        <p class="hero-sub" data-reveal>
+          Final-year Meteorology student at <strong>Institut Teknologi Bandung</strong>. I work with large, messy datasets and produce the analysis that drives action. Bias correction, time-series modeling, geospatial pipelines, risk frameworks.
+        </p>
+
+        <div class="hero-cta" data-reveal>
+          <a href="#work" class="btn btn-primary" data-magnetic>
+            <span>View selected work</span>
+            <span class="btn-arrow">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7H13M13 7L7 1M13 7L7 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+          <a href="Emelio_Exaudi_Resume.pdf" target="_blank" class="btn btn-ghost" data-magnetic>
+            <span>Download resume</span>
+            <span class="btn-arrow">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1V11M7 11L1 5M7 11L13 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <!-- KPI strip with count-up -->
+      <div class="kpi-strip" data-reveal>
+        <div class="kpi">
+          <div class="kpi-mark"></div>
+          <div class="kpi-value">
+            <span class="kpi-num" data-count="4.00" data-decimals="2">0</span>
+            <span class="kpi-suffix">/ 4.00</span>
+          </div>
+          <div class="kpi-label">Semester 7 GPA</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-mark"></div>
+          <div class="kpi-value">
+            <span class="kpi-num" data-count="3">0</span>
+          </div>
+          <div class="kpi-label">Internships completed</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-mark"></div>
+          <div class="kpi-value">
+            <span class="kpi-num" data-count="10">0</span>
+          </div>
+          <div class="kpi-label">Direct reports led</div>
+        </div>
+        <div class="kpi">
+          <div class="kpi-mark"></div>
+          <div class="kpi-value">
+            <span class="kpi-num" data-count="2026" data-noformat>0</span>
+          </div>
+          <div class="kpi-label">IEEEBIG National Finalist</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint" data-reveal>
+      <span>Scroll</span>
+      <span class="hsh-line"></span>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="marquee-section">
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Python</span><span class="marquee-dot">●</span>
+        <span>SQL</span><span class="marquee-dot">●</span>
+        <span>pandas</span><span class="marquee-dot">●</span>
+        <span>NumPy</span><span class="marquee-dot">●</span>
+        <span>xarray</span><span class="marquee-dot">●</span>
+        <span>scikit-learn</span><span class="marquee-dot">●</span>
+        <span>QGIS</span><span class="marquee-dot">●</span>
+        <span>WRF-Hydro</span><span class="marquee-dot">●</span>
+        <span>Bias Correction</span><span class="marquee-dot">●</span>
+        <span>Time Series</span><span class="marquee-dot">●</span>
+        <span>Risk Modeling</span><span class="marquee-dot">●</span>
+        <span>CMIP6</span><span class="marquee-dot">●</span>
+        <span>Google Earth Engine</span><span class="marquee-dot">●</span>
+        <span>Microsoft Excel</span><span class="marquee-dot">●</span>
+        <!-- Duplicate for seamless loop -->
+        <span>Python</span><span class="marquee-dot">●</span>
+        <span>SQL</span><span class="marquee-dot">●</span>
+        <span>pandas</span><span class="marquee-dot">●</span>
+        <span>NumPy</span><span class="marquee-dot">●</span>
+        <span>xarray</span><span class="marquee-dot">●</span>
+        <span>scikit-learn</span><span class="marquee-dot">●</span>
+        <span>QGIS</span><span class="marquee-dot">●</span>
+        <span>WRF-Hydro</span><span class="marquee-dot">●</span>
+        <span>Bias Correction</span><span class="marquee-dot">●</span>
+        <span>Time Series</span><span class="marquee-dot">●</span>
+        <span>Risk Modeling</span><span class="marquee-dot">●</span>
+        <span>CMIP6</span><span class="marquee-dot">●</span>
+        <span>Google Earth Engine</span><span class="marquee-dot">●</span>
+        <span>Microsoft Excel</span><span class="marquee-dot">●</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section class="section section-work" id="work">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <div class="section-eyebrow">
+          <span class="se-num">01</span>
+          <span class="se-line"></span>
+          <span class="se-label">Selected Work</span>
+        </div>
+        <h2 class="section-title">
+          <span data-reveal-line><span>Recent projects,</span></span>
+          <span data-reveal-line><span>full case studies.</span></span>
+        </h2>
+        <p class="section-sub">Each project includes the business question, methodology, and outcome. Click any card for the full case study with embedded data visualizations and links.</p>
+      </div>
+
+      <div class="work-grid" id="work-grid">
+        <!-- Cards rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNATURE DATA VIZ -->
+  <section class="section section-viz">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <div class="section-eyebrow">
+          <span class="se-num">02</span>
+          <span class="se-line"></span>
+          <span class="se-label">Signature Visualization</span>
+        </div>
+        <h2 class="section-title">
+          <span data-reveal-line><span>From raw measurement</span></span>
+          <span data-reveal-line><span>to corrected signal.</span></span>
+        </h2>
+        <p class="section-sub">Sample output from the ANTAM SIREN project: satellite rainfall before and after bias correction, plotted against ground rain-gauge records. Interactive. Hover for values.</p>
+      </div>
+
+      <div class="viz-stage" data-reveal>
+        <div class="viz-toolbar">
+          <div class="viz-tabs">
+            <button class="viz-tab active" data-viz="bias">Bias Correction</button>
+            <button class="viz-tab" data-viz="risk">12-Factor Risk Matrix</button>
+            <button class="viz-tab" data-viz="ts">CMIP6 Projection</button>
+          </div>
+          <div class="viz-status">
+            <span class="viz-status-dot"></span>
+            <span id="viz-status-text">LIVE</span>
+          </div>
+        </div>
+        <div class="viz-canvas-wrap">
+          <svg class="viz-svg" id="viz-svg" viewBox="0 0 1000 460" preserveAspectRatio="xMidYMid meet"></svg>
+          <div class="viz-tooltip" id="viz-tooltip"></div>
+        </div>
+        <div class="viz-caption" id="viz-caption">
+          <div class="vc-row"><span class="vc-k">Method</span><span class="vc-v" id="vc-method">Linear Scaling + Quantile Mapping</span></div>
+          <div class="vc-row"><span class="vc-k">Data source</span><span class="vc-v" id="vc-source">GPM IMERG + CHIRPS satellite, 30-day window</span></div>
+          <div class="vc-row"><span class="vc-k">Outcome</span><span class="vc-v" id="vc-outcome">Bias reduced by 67%, R² improved 0.42 → 0.78</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS MATRIX -->
+  <section class="section section-skills" id="skills">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <div class="section-eyebrow">
+          <span class="se-num">03</span>
+          <span class="se-line"></span>
+          <span class="se-label">Skills</span>
+        </div>
+        <h2 class="section-title">
+          <span data-reveal-line><span>Tools and</span></span>
+          <span data-reveal-line><span>competencies.</span></span>
+        </h2>
+        <p class="section-sub">Self-assessed. Working means familiar with basics. Proficient means I ship work without supervision. Advanced means I can lead others.</p>
+      </div>
+
+      <div class="skills-grid" id="skills-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section-about" id="about">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <div class="section-eyebrow">
+          <span class="se-num">04</span>
+          <span class="se-line"></span>
+          <span class="se-label">About</span>
+        </div>
+        <h2 class="section-title">
+          <span data-reveal-line><span>Background</span></span>
+          <span data-reveal-line><span>and trajectory.</span></span>
+        </h2>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-text" data-reveal>
+          <p>I am a final-year Meteorology student at Institut Teknologi Bandung with a working GPA of 4.00 / 4.00 in semester 7. My academic background sits at the intersection of atmospheric science, geospatial analysis, and computational modeling. Across three internships and several research projects, I have learned to treat data quality, validation, and reproducibility as non-negotiables.</p>
+          <p>I am pivoting from atmospheric research into data analytics and data engineering because the skill set transfers cleanly. Bias correction is feature engineering. Time-series analysis applies the same to revenue as to rainfall. ETL pipelines are ETL pipelines regardless of the source. My goal is to bring rigorous scientific habits to business problems.</p>
+          <p>Outside academic work, I lead the Research and Development Division at Atmosphaira, the ITB Meteorology Student Association, where I manage a 10-person team building IoT-based early warning instruments for a partner village.</p>
+        </div>
+        <div class="about-aside" data-reveal>
+          <div class="aside-block" data-tilt>
+            <div class="aside-title"><span class="ab-num">EDU</span> Education</div>
+            <div class="aside-item">
+              <strong>Institut Teknologi Bandung</strong>
+              <span>B.Sc. Meteorology</span>
+              <span class="aside-meta">Aug 2022 — Present · GPA 4.00 / 4.00 (Sem 7)</span>
+            </div>
+          </div>
+          <div class="aside-block" data-tilt>
+            <div class="aside-title"><span class="ab-num">CRT</span> Certifications</div>
+            <div class="aside-item">
+              <strong>Google Data Analytics Professional</strong>
+              <span>Coursera · 2024</span>
+            </div>
+          </div>
+          <div class="aside-block" data-tilt>
+            <div class="aside-title"><span class="ab-num">LDR</span> Leadership</div>
+            <div class="aside-item">
+              <strong>Head of Research &amp; Development</strong>
+              <span>Atmosphaira ITB · 2024 — 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-contact" id="contact">
+    <div class="container">
+      <div class="section-header" data-reveal>
+        <div class="section-eyebrow">
+          <span class="se-num">05</span>
+          <span class="se-line"></span>
+          <span class="se-label">Contact</span>
+        </div>
+        <h2 class="section-title contact-title">
+          <span data-reveal-line><span>Let's build</span></span>
+          <span data-reveal-line><span>something together.</span></span>
+        </h2>
+        <p class="section-sub">I respond to email within one business day. LinkedIn within two.</p>
+      </div>
+
+      <div class="contact-grid">
+        <a href="mailto:emelioexaudi@gmail.com" class="contact-card" data-magnetic data-tilt>
+          <div class="cc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 8L12 13L21 8M5 19H19C20.1 19 21 18.1 21 17V7C21 5.9 20.1 5 19 5H5C3.9 5 3 5.9 3 7V17C3 18.1 3.9 19 5 19Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="cc-body">
+            <div class="cc-label">Email</div>
+            <div class="cc-value">emelioexaudi@gmail.com</div>
+          </div>
+          <div class="cc-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 14L14 2M14 2H5M14 2V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
+        <a href="https://linkedin.com/in/emelio-exaudi" target="_blank" rel="noopener" class="contact-card" data-magnetic data-tilt>
+          <div class="cc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zm-1.78 13.02h3.55V9H3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          </div>
+          <div class="cc-body">
+            <div class="cc-label">LinkedIn</div>
+            <div class="cc-value">linkedin.com/in/emelio-exaudi</div>
+          </div>
+          <div class="cc-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 14L14 2M14 2H5M14 2V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
+        <a href="tel:+6281213264603" class="contact-card" data-magnetic data-tilt>
+          <div class="cc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M22 16.92V19.92C22 20.47 21.78 20.99 21.39 21.38C20.99 21.78 20.47 22 19.92 22C16.43 21.65 13.07 20.43 10.16 18.46C7.45 16.66 5.16 14.37 3.36 11.66C1.38 8.74 0.15 5.37 -0.19 1.86C-0.19 1.31 0.04 0.79 0.43 0.4C0.82 0 1.34 -0.21 1.89 -0.21H4.89C5.89 -0.22 6.74 0.51 6.89 1.5C7.04 2.36 7.31 3.21 7.69 4.01C7.99 4.62 7.83 5.36 7.31 5.81L6.04 7.08C7.71 10.01 10.16 12.47 13.09 14.13L14.36 12.86C14.81 12.34 15.55 12.18 16.16 12.48C16.96 12.86 17.81 13.13 18.67 13.28C19.67 13.43 20.4 14.29 20.39 15.29L22 16.92Z" transform="translate(2 1)" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="cc-body">
+            <div class="cc-label">Phone</div>
+            <div class="cc-value">+62 812-1326-4603</div>
+          </div>
+          <div class="cc-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 14L14 2M14 2H5M14 2V11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
+        <a href="Emelio_Exaudi_Resume.pdf" target="_blank" class="contact-card" data-magnetic data-tilt>
+          <div class="cc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2ZM13 9V3.5L18.5 9H13Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="cc-body">
+            <div class="cc-label">Resume</div>
+            <div class="cc-value">Emelio_Exaudi_Resume.pdf</div>
+          </div>
+          <div class="cc-arrow">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2V14M8 14L2 8M8 14L14 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-left">
+      <div class="footer-mark">EX</div>
+      <span>© 2026 Emelio Exaudi Lumban Gaol</span>
+    </div>
+    <div class="footer-center">
+      <span>Bandung, Indonesia</span>
+      <span class="footer-dot">●</span>
+      <span id="footer-time">--:--</span>
+      <span class="footer-dot">●</span>
+      <span>WIB</span>
+    </div>
+    <div class="footer-right">
+      <a href="#top" data-magnetic>Back to top <span class="ft-arrow">↑</span></a>
+    </div>
+  </div>
+</footer>
+
+<!-- CASE STUDY MODAL -->
+<div class="modal" id="modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-panel" role="dialog" aria-modal="true">
+    <button class="modal-close" data-close aria-label="Close" data-magnetic>
+      <svg width="18" height="18" viewBox="0 0 18 18" fill="none"><path d="M2 2L16 16M16 2L2 16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+    </button>
+    <div class="modal-content" id="modal-content"></div>
+  </div>
+</div>
+
+<script id="inline-data" type="application/json">
+{"profile": {"name": "Emelio Exaudi Lumban Gaol", "shortName": "Emelio Exaudi", "photo": "assets/profile.jpg", "roles": ["Data Analyst", "Data Engineer", "Cybersecurity Analyst", "Research Engineer"], "location": "Bandung, Indonesia", "email": "emelioexaudi@gmail.com", "phone": "+62 812-1326-4603", "linkedin": "https://linkedin.com/in/emelio-exaudi", "github": "", "tagline": "Reading patterns in noisy data. Atmospheric, geospatial, behavioral.", "summary": "Final-year Meteorology student at Institut Teknologi Bandung. I work with large, messy environmental datasets and turn them into decisions. Python, SQL, Microsoft Excel. Bias correction, time-series analysis, hydrological modeling. Currently looking for analyst and engineering roles."}, "stats": [{"value": "4.00", "label": "Sem 7 GPA / 4.00"}, {"value": "10", "label": "Team led"}, {"value": "1KM", "label": "WRF-Hydro grid"}, {"value": "2026", "label": "IEEEBIG Finalist"}], "achievements": [{"id": "ieeebig-2026", "year": "2026", "type": "Competition", "title": "IEEEBIG 2026 National Finalist", "org": "Brawijaya Case Competition", "description": "Co-developed ECOS, an end-of-life EV battery management framework. Built risk-assessment heatmap and contributed to financial model.", "tags": ["Python", "Risk Modeling", "Business Strategy"], "role": "Risk & Strategy Lead", "period": "Jan 2026 \u2013 Feb 2026", "coords": {"x": 0.15, "y": 0.22}, "fullDescription": ["Team Elpatron reached the national finals of the 2026 IEEEBIG case competition with ECOS (EcoBat Circular Ownership System), a proposed framework for managing end-of-life EV batteries in Indonesia. The system combines a Battery-as-a-Service deposit scheme, a collection network leveraging existing SPKLU charging infrastructure, and a battery grading facility for second-life applications.", "My primary contribution was the risk assessment module. I identified twelve operational and financial risk factors across the supply chain, scored each on probability and impact axes, and built a heatmap visualization in Python (matplotlib) that became the team's anchor slide.", "I also contributed to financial-viability reverse engineering: revenue projections of Rp 9.2 trillion, net margin of 88%, BaaS customer base ranging 28K to 443K over five years. The competition required bilingual deliverables (English report, Indonesian pitch) and consulting-style presentation work modeled on BCG and McKinsey deck conventions."], "highlights": ["12-factor risk model built in Python (matplotlib)", "Financial model: Rp 9.2T revenue, 88% net margin", "5-year BaaS customer projection: 28K to 443K", "Bilingual deliverables (EN report + ID pitch)"], "showcase": [{"label": "ECOS Framework Overview", "type": "diagram", "caption": "Three-pillar system: BaaS deposit, SPKLU collection, grading facility", "image": ""}, {"label": "12-Factor Risk Heatmap", "type": "diagram", "caption": "Probability vs impact axes, color-coded by severity", "image": ""}, {"label": "5-Year Customer Projection", "type": "chart", "caption": "BaaS uptake scenarios from conservative to aggressive", "image": ""}], "link": ""}, {"id": "antam-hsse", "year": "2026", "type": "Internship", "title": "HSSE Data Analyst Intern", "org": "PT ANTAM Tbk UBPE Pongkor", "description": "Bias-corrected satellite rainfall against gauge data. Built siren-threshold recommendations from lag-correlation analysis at extensometer stations.", "tags": ["Python", "QGIS", "Bias Correction", "Time-Series"], "role": "HSSE Data Analyst Intern", "period": "Jan 2026 \u2013 Feb 2026", "coords": {"x": 0.78, "y": 0.18}, "fullDescription": ["Six-week internship at ANTAM's Pongkor gold mine working with the Health, Safety, Security & Environment department. The core problem: the mine's slope-monitoring early-warning system relied on rainfall thresholds that did not account for satellite-product bias or cumulative rainfall history.", "Bias correction. Pulled GPM IMERG and CHIRPS satellite rainfall, applied Linear Scaling and Quantile Mapping in Python against ground rain-gauge records, benchmarked which combination performed best at the site scale.", "Lag analysis. Ran cross-correlation between corrected rainfall and displacement readings from two extensometer stations. Identified statistically significant lag windows that informed threshold redesign.", "Siren threshold review. Tested the existing operational threshold against one year of field data. Found cases where it missed antecedent-rainfall and multi-day cumulative patterns, and recommended a revised threshold logic.", "Spatial context. Used DEMNAS in QGIS to produce elevation and slope-class maps of the concession area for landslide-susceptibility context. Presented four operational recommendations directly to HSSE leadership."], "highlights": ["Two bias-correction methods benchmarked on satellite rainfall", "Cross-correlation analysis on two extensometer stations", "Year-long siren threshold audit", "Four formal recommendations to HSSE leadership"], "showcase": [{"label": "SIREN Dashboard Mock", "type": "ui", "caption": "Internal monitoring dashboard concept", "image": ""}, {"label": "Bias Correction Comparison", "type": "chart", "caption": "GPM vs CHIRPS vs gauge over study period", "image": ""}, {"label": "Slope-Class Map (QGIS)", "type": "map", "caption": "Concession area landslide susceptibility classes", "image": ""}], "link": ""}, {"id": "deans-list-7", "year": "2025", "type": "Academic", "title": "Dean's List Semester 7", "org": "Institut Teknologi Bandung", "description": "Perfect 4.00 / 4.00 GPA. Coursework in data science, statistical modeling, computational methods.", "tags": ["Academic"], "role": "Undergraduate, Meteorology", "period": "Aug 2025 \u2013 Dec 2025", "coords": {"x": 0.42, "y": 0.52}, "fullDescription": ["Earned a perfect 4.00 / 4.00 GPA for Semester 7 at Institut Teknologi Bandung, qualifying for the Dean's List. The semester covered the more quantitative end of the Meteorology curriculum, including Data Science, Statistical Modeling, Computational Methods, Atmospheric Modeling, and Hydrometeorology.", "This was also the semester where I committed to the data-analyst career pivot, which shaped how I approached coursework: every project was treated as a portfolio piece rather than a deliverable to be forgotten after grading."], "highlights": ["GPA 4.00 / 4.00", "Six quantitative courses including Data Science and Stat Modeling", "Coursework reframed as portfolio work"], "showcase": [], "link": ""}, {"id": "bmkg-2025", "year": "2025", "type": "Internship", "title": "Climate Change Analysis Intern", "org": "BMKG (Indonesian Meteorological Agency)", "description": "Statistical downscaling of CMIP6 climate model outputs. Validated against CHIRPS for mining-sector risk assessment.", "tags": ["Python", "xarray", "CMIP6", "Climate Modeling"], "role": "Climate Change Analysis Intern", "period": "Jul 2025 \u2013 Aug 2025", "coords": {"x": 0.82, "y": 0.65}, "fullDescription": ["Four-week internship at BMKG's Climate Change Information Centre. Focus: making global climate model outputs usable at site scale for mining-industry risk assessment.", "Statistical downscaling. Applied Linear Scaling bias correction to CMIP6 global climate model outputs in Python, generating higher-resolution projection datasets aligned to Indonesian station locations.", "Validation. Compared downscaled outputs against CHIRPS satellite rainfall records to quantify residual bias and assess how well the method preserved real-world rainfall statistics.", "Tooling. Built reusable Python workflows in xarray and netCDF4 to process multi-gigabyte climate datasets. Presented methodology and findings to the Climate Change Information Centre team at the end of the placement."], "highlights": ["CMIP6 statistical downscaling pipeline", "Validation against CHIRPS satellite records", "Reusable xarray / netCDF4 workflow", "Final presentation to CCIC team"], "showcase": [{"label": "Downscaling Workflow", "type": "diagram", "caption": "CMIP6 -> bias correction -> validation pipeline", "image": ""}, {"label": "Bias Distribution", "type": "chart", "caption": "Residual bias before and after Linear Scaling", "image": ""}], "link": ""}, {"id": "atmosphaira-rnd", "year": "2025", "type": "Leadership", "title": "Head of RnD, Atmosphaira ITB", "org": "Meteorology Student Association", "description": "Led a 10-person team building IoT-based water-level and rainfall recorders, deployed as early-warning tools in a partner village.", "tags": ["Leadership", "IoT", "WRF-Hydro"], "role": "Head of Research and Development", "period": "May 2025 \u2013 Feb 2026", "coords": {"x": 0.2, "y": 0.78}, "fullDescription": ["Led the Research and Development division of Atmosphaira, the ITB Meteorology Student Association, for a full term. The division of 10 people split across hardware, firmware, and modeling tracks.", "Hardware program. Took an IoT-based Automatic Water Level Recorder (AWLR) and Automatic Rainfall Recorder (ARR) from prototype to field deployment in a partner village, where they now function as community early-warning tools.", "Modeling. Ran WRF-Hydro hydrometeorological simulations in parallel with the hardware work to produce predictive rainfall and discharge maps that informed where the recorders should be placed.", "Operations. Managed task delegation, weekly sprint reviews, and stakeholder coordination with faculty supervisors and external partners. Closed the term with a formal post-mortem document to transfer lessons to the next division head."], "highlights": ["10-person cross-functional team led for 10 months", "AWLR + ARR shipped to a partner village", "WRF-Hydro modeling informed deployment locations", "Formal handover post-mortem to next term"], "showcase": [{"label": "AWLR Hardware Build", "type": "photo", "caption": "Field-ready water level recorder", "image": ""}, {"label": "Village Deployment", "type": "photo", "caption": "Installation site in partner village", "image": ""}], "link": ""}, {"id": "google-data-cert", "year": "2024", "type": "Certification", "title": "Google Data Analytics Professional Certificate", "org": "Coursera", "description": "Eight-course program covering SQL, R, Tableau, and the full analyst workflow.", "tags": ["SQL", "R", "Tableau"], "role": "Self-directed learner", "period": "2024", "coords": {"x": 0.62, "y": 0.85}, "fullDescription": ["Completed the eight-course Google Data Analytics Professional Certificate on Coursera. The program covers the full analyst workflow: ask, prepare, process, analyze, share, act. Tools touched include spreadsheets, SQL, R, and Tableau.", "This cert was my structured entry point into the analyst path. Useful as a foundation; not a substitute for project work, which is why I've prioritized building real portfolio pieces alongside it."], "highlights": ["8 courses, completed in sequence", "SQL + R + Tableau foundation", "Full analyst workflow coverage"], "showcase": [], "link": ""}], "skills": {"Languages": ["Python", "SQL", "MATLAB", "Bash", "R"], "Data & Analysis": ["pandas", "NumPy", "scikit-learn", "xarray", "Microsoft Excel"], "Geospatial": ["QGIS", "ArcGIS", "Google Earth Engine"], "Modeling": ["WRF-Hydro", "HEC-RAS", "HEC-HMS", "CMIP6 Downscaling"]}, "currentlyDoing": ["Finishing thesis on WRF-Hydro hydrological modeling for IKN region", "Applying to data analyst and engineering roles in Indonesia", "Open to remote analyst contract work"]}
+</script>
+<script src="script.js"></script>
+</body>
+</html>
